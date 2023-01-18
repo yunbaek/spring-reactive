@@ -23,4 +23,11 @@ class WebClientControllerTest {
 		mockMvc.perform(get("/call-rest-template"))
 			.andExpect(status().isOk());
 	}
+
+	@DisplayName("WebClient 를 이용한 호출은 non-blocking 으로 동작")
+	@Test
+	void webClientApiCallTest() throws Exception {
+		mockMvc.perform(get("/call-web-client"))
+			.andExpect(status().isOk());
+	}
 }

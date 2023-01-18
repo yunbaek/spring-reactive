@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SlowController {
 
-
 	@GetMapping("/slow-api")
 	public List<String> slowApi() throws InterruptedException {
 		Thread.sleep(2000);
